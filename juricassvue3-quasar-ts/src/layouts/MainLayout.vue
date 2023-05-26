@@ -17,6 +17,7 @@
     </q-header>
 
     <q-drawer v-model="popDrawer" side="left" bordered width="325">
+      <q-btn flat round icon="close" @click="popDrawer = false"> </q-btn>
       <search-form />
     </q-drawer>
 
