@@ -10,4 +10,8 @@ export default {
   appName: 'Juricass',
   readDecision: 'Read decision',
   noResultFound: 'No result found',
+  quickSearch: 'Quick search',
+  search: 'Search',
+  startDate: 'Start date',
+  enDate: 'End Date',
 };

@@ -14,9 +14,12 @@ export const startDate = ref(undefined);
 export const endDate = ref(undefined);
 export const popDrawer = ref(false);
 
-const queryObj = ref(new Query(query?.value ?? quickQuery.value));
+export const queryObj = ref(new Query(query?.value ?? quickQuery.value));
 
 export const search = async () => {
+  if (!popDrawer.value && quickQuery.value !== '')
+    queryObj.value.query = quickQuery.value;
+
   try {
     isLoading.value = true;
     //TODO remove default value when API will be ready for home query
@@ -32,11 +35,11 @@ export const search = async () => {
 };
 
 export const handleSearch = async () => {
-  quickQuery.value = undefined; //TODO handle default value when API will be ready
+  quickQuery.value = ''; //TODO handle default value when API will be ready
   const queryDatas = {
     query: query.value,
-    startDate: startDate.value?.split('T')[0],
-    endDate: endDate.value?.split('T')[0],
+    startDate: startDate.value,
+    endDate: endDate.value,
     exact: exact.value ? 'exact' : undefined,
   };
   queryObj.value = queryDatas;
