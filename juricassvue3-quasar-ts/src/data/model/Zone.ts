@@ -1,4 +1,4 @@
-class Zone {
+export default class Zone {
   name: string | undefined;
   start: number | undefined;
   end: number | undefined;
