@@ -1,5 +1,5 @@
 import { JudilibreApiService } from '../services/JudilibreApiService';
-//import { Decision } from '../data/model/Decision';
+import Decision from '../data/model/Decision';
 
 const apiService = new JudilibreApiService();
 

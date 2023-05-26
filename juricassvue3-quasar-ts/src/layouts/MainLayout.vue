@@ -20,7 +20,7 @@
 
     <q-page-container>
       <div class="row justify-center">
-        <div class="col-12 col-lg-8">
+        <div class="col-12 col-md-8">
           <q-page padding>
             <router-view />
           </q-page>
