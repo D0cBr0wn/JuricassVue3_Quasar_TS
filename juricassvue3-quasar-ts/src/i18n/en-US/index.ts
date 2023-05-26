@@ -8,4 +8,6 @@ export default {
   bookmarks: 'Bookmarks',
   about: 'About',
   appName: 'Juricass',
+  readDecision: 'Read decision',
+  noResultFound: 'No result found',
 };
