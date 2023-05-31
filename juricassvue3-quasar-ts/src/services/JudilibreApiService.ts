@@ -12,10 +12,11 @@ export class JudilibreApiService {
 
   fetch = async (
     url: string,
-    method = 'GET',
-    data?: any,
+    // eslint-disable-next-line @typescript-eslint/no-inferrable-types
+    method: string = 'GET',
+    data?: unknown,
     headersParams: Record<string, string> = {}
-  ) => {
+  ): Promise<any> => {
     // Set headers
     const headers = this.setHeader(headersParams);
 
